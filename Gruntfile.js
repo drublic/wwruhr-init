@@ -105,7 +105,6 @@ module.exports = function(grunt) {
 					'content/boilerplate.html',
 					'content/init.html',
 					'content/outro.html',
-					'content/credits.html',
 					'content/footer.html'
 				],
 				dest: 'index.html',
