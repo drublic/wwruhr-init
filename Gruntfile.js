@@ -96,6 +96,22 @@ module.exports = function(grunt) {
 			]
 		},
 
+		concat: {
+			dist: {
+				src: [
+					'content/header.html',
+					'content/intro.html',
+					'content/dry.html',
+					'content/boilerplate.html',
+					'content/init.html',
+					'content/outro.html',
+					'content/credits.html',
+					'content/footer.html'
+				],
+				dest: 'index.html',
+			}
+		},
+
 		watch: {
 			main: {
 				files: [ 'Gruntfile.js', 'js/reveal.js', 'css/reveal.css' ],
@@ -104,6 +120,10 @@ module.exports = function(grunt) {
 			theme: {
 				files: [ 'css/theme/source/*.scss', 'css/theme/template/*.scss' ],
 				tasks: 'themes'
+			},
+			content: {
+				files: [ 'content/**/*.html' ],
+				tasks: 'concat'
 			}
 		}
 
@@ -116,11 +136,12 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks( 'grunt-contrib-uglify' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( 'grunt-contrib-sass' );
+	grunt.loadNpmTasks( 'grunt-contrib-concat' );
 	grunt.loadNpmTasks( 'grunt-contrib-connect' );
 	grunt.loadNpmTasks( 'grunt-zip' );
 
 	// Default task
-	grunt.registerTask( 'default', [ 'jshint', 'cssmin', 'uglify', 'qunit' ] );
+	grunt.registerTask( 'default', [ 'jshint', 'concat', 'cssmin', 'uglify', 'qunit' ] );
 
 	// Theme task
 	grunt.registerTask( 'themes', [ 'sass' ] );
