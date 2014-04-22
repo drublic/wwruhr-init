@@ -1,21 +1,10 @@
 {
-  "name": "reveal.js",
-  "version": "2.6.2",
-  "description": "The HTML Presentation Framework",
-  "homepage": "http://lab.hakim.se/reveal-js",
-  "subdomain": "revealjs",
-  "scripts": {
-    "test": "grunt test",
-    "start": ""
-  },
+  "name": "wwruhr-init",
+  "version": "1.0.0-pre",
   "author": {
-    "name": "Hakim El Hattab",
-    "email": "hakim.elhattab@gmail.com",
-    "web": "http://hakim.se"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/hakimel/reveal.js.git"
+    "name": "Hans Christian Reinl",
+    "email": "info@drublic.de",
+    "web": "http://drublic.de"
   },
   "engines": {
     "node": "~0.8.0"
@@ -40,8 +29,7 @@
   },
   "licenses": [
     {
-      "type": "MIT",
-      "url": "https://github.com/hakimel/reveal.js/blob/master/LICENSE"
+      "type": "MIT"
     }
   ]
 }
